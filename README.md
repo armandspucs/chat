@@ -1,1 +1,1 @@
-# chat
+Chata klienta daļa StartIT kursiem

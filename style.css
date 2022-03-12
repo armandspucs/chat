@@ -1,0 +1,41 @@
+body
+{
+    /*background: red;*/
+    /*background: url('ainava.jpg');*/
+    background: url('grafitti.jpg');
+    /*background-size: cover;*/
+
+}
+
+.wrapper
+{
+    width: 500px;
+    height: 500px;;
+    background: white;
+    border: 1px solid rgb(182, 131, 131); /*#5FB683*/
+    padding: 5px;
+    margin: auto;
+
+    /*zemāk paraugs vertik. un horizont. centrēšanai*/
+    /*position: absolute;
+    top:50%; margin-top:-250px;
+    left: 50%; margin-left:-250px;*/
+
+    /*bonus dekorācijas*/
+    /*font-family: Arial, Helvetica, sans-serif;*/ /*fonti*/
+    /*border-radius: 10px;*/ /*apaļi stūri*/
+    /*box-shadow: 3px 3px 15px#5E0000;*/ /*ēna*/
+    /*opacity: 0.5;*/ /*caurspīdīgums*/
+}
+
+.chataTeksti
+{
+    background: rgb(109, 109, 109);
+    color: white;
+    padding: 5px;
+    height: 400px;
+    overflow: scroll;
+}
+
+
+
