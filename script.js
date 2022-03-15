@@ -1,5 +1,6 @@
 /*write later*/let zinas = document.querySelector('.chataZinas');
 /*write later*/let zina = document.querySelector('.manaZina');
+/*write later*/let vards = document.querySelector('.vards');
 
 
 function sutitZinu()
@@ -10,7 +11,17 @@ function sutitZinu()
     //document.querySelector('.chataTeksti').innerHTML = 'hello'
     //zinas.innerHTML = zinas.innerHTML+'hello'+'<br />'
 
-    zinas.innerHTML = zinas.innerHTML + zina.value + '<br />'
+    /*later add if*/
+    if(vards.value == '' || zina.value == '')
+    {
+        alert('Nav ievadīts vārds vai ziņa');
+    }
+    else
+    {
+        zinas.innerHTML = zinas.innerHTML + zina.value + '<br />'
+
+        /*later*/fetch('https://chatserver.armandspucs.repl.co/sutit?zina='+zina.value+'&vards='+vards.value);
+    }
 
 }
 
@@ -27,7 +38,7 @@ async function ieladetChataZinas()
 
 async function ieladetChataZinasJson()
 {
-    let datiNoServera = await fetch('chatazinas.json');
+    let datiNoServera = await fetch('https://chatserver.armandspucs.repl.co/lasit'); //chatazinas.json
     let dati = await datiNoServera.json();
     //zinas.innerHTML = await dati;
     //console.log( await dati.length );
@@ -43,6 +54,10 @@ async function ieladetChataZinasJson()
         i++;
     }
 
+    zinas.scrollTop = zinas.scrollHeight;
+
 }
-ieladetChataZinasJson();
+//ieladetChataZinasJson();
+
+setInterval(ieladetChataZinasJson, 1000)
 
