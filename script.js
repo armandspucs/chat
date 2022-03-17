@@ -25,6 +25,31 @@ function sutitZinu()
 
 }
 
+/* bonus funkcija ziņu sūtīšana ar POST metodi */
+async function sutitZinuPost()
+{
+
+    let requestBodyJson = {"vards": "Janis", "zina": "Cau" };
+    let requestBodyString = JSON.stringify(requestBodyJson);
+
+
+    let request = await fetch('https://chatserver.armandspucs.repl.co/sutit_post',
+    {
+    method:"POST",
+    headers:
+        {
+        'X-API-KEY': 'asd',
+        'Content-Type': 'application/json'
+        },
+    body:requestBodyString
+    });
+
+    let atbilde = await request.text();
+    console.log(atbilde);
+
+}
+//sutitZinuPost();
+
 
 async function ieladetChataZinas()
 {
